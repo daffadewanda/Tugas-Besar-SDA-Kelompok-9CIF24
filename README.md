@@ -68,7 +68,7 @@ Tubes1_revisi2/
 Memasuki antarmuka awal, kita dihadapkan dengan opsi-opsi kita mau masuk sebagai pasien, dokter, atau admin.
 
 
-### 🕴Masuk Sebagai Pasien
+### 🙍‍♂️ Masuk Sebagai Pasien
 <p align="center" width="100%">
     <img width="50%" src="https://github.com/user-attachments/assets/97c61d4c-f684-4a68-b76a-df8e8e24463d">
 </p>
@@ -151,31 +151,75 @@ Ketika kita memilih opsi 2, maka kita diminta memasukkan ID Dokter mana yang mau
 <p align="center" width="100%">
     <img width="50%" src="https://github.com/user-attachments/assets/4a1397bb-f4d7-490b-aa78-37f6a499f4c8">
 </p>
+Ketika kita memilih opsi 3, maka kita diminta memasukkan ID Dokter mana yang mau di-logout-kan. Setelah <i>logout</i>, artinya dokter itu sudah pulang atau sudah tidak pada <i>shift</i> kerjanya.
 
-![image](https://github.com/user-attachments/assets/18d3b997-5fbe-438a-ae19-44f1bdea98d4)
-![image](https://github.com/user-attachments/assets/91ffe018-5083-4346-865e-01f2bec02861)
+### 👨‍💻 Masuk Sebagai Admin
+<p align="center" width="100%">
+    <img width="50%" src="https://github.com/user-attachments/assets/18d3b997-5fbe-438a-ae19-44f1bdea98d4">
+</p>
+Saat memilih opsi Masuk Sebagai Admin, harus memasukkan PIN untuk mengautentikasi bahwa yang masuk adalah admin
 
+<br/><br/>
+<p align="center" width="100%">
+    <img width="50%" src="https://github.com/user-attachments/assets/91ffe018-5083-4346-865e-01f2bec02861">
+</p>
+Di sini, kita bisa melakukan perubahan dan pencarian terhadap data pasien, dokter, dan pertemuan, di antaranya kita bisa
 
-![image](https://github.com/user-attachments/assets/c6898dee-35d0-4454-82a5-c942ae47c506)
-![image](https://github.com/user-attachments/assets/3aa4d480-c6b4-4d49-a58a-b71bbc936b45)
-![image](https://github.com/user-attachments/assets/cb864400-2b30-4296-a325-c1c3a71b6eb5)
-![image](https://github.com/user-attachments/assets/74682d3e-5915-4071-9808-9b7aca3d01d0)
-![image](https://github.com/user-attachments/assets/3685e5c7-c5a1-4bfd-ba07-0c16969caec2)
-![image](https://github.com/user-attachments/assets/d456e7d7-7ec3-4375-ba33-d980563dbbe8)
-![image](https://github.com/user-attachments/assets/07296705-366c-4c9a-baa2-f5011a4b5006)
+1. Menghapus Pasien dengan Menggunakan ID
+2. Memperlihatkan Semua Daftar Pasien
+3. Memperlihatkan Dokter Yang Baru Saja <i>Login</i>
+4. Memproses Pertemuan atau Janji Temu
+5. Memperlihatkan Pertemuan atau Janji Temu Mendatang
+6. Memperlihatkan Semua Daftar Pasien Berdasarkan BST <i>Inorder</i>
+7. Menambahkan Riwayat Medis kepada Pasien
 
+<br/><br/>
+<p align="center" width="100%">
+    <img width="50%" src="https://github.com/user-attachments/assets/c6898dee-35d0-4454-82a5-c942ae47c506">
+</p>
+Ketika memilih opsi 1, masukkan ID Pasien yang mau dihapus dari daftar pasien.
 
-![image](https://github.com/user-attachments/assets/b53684b3-a512-473e-8212-598b975e1f4e)
+<br/><br/>
+<p align="center" width="100%">
+    <img src="https://github.com/user-attachments/assets/3aa4d480-c6b4-4d49-a58a-b71bbc936b45">
+</p>
+Ketika memilih opsi 2, kita akan diperlihatkan semua daftar pasien beserta ID, Alamat, Nomor Telepon, dan Riwayat Medisnya.
 
+<br/><br/>
+<p align="center" width="100%">
+    <img width="50%" src="https://github.com/user-attachments/assets/cb864400-2b30-4296-a325-c1c3a71b6eb5">
+</p>
+Ketika memilih opsi 3, kita akan diperlihatkan dokter yang baru saja login, dengan detail ID, Nama, Spesialis, <i>Shift</i> Kerja, dan Pertemuan Yang Dimiliki.
 
+<br/><br/>
+<p align="center" width="100%">
+    <img width="50%" src="https://github.com/user-attachments/assets/74682d3e-5915-4071-9808-9b7aca3d01d0">
+</p>
+Ketika memilih opsi 4, kita akan memproses pertemuan yang diminta oleh pasien dan meneruskannya ke dokter supaya bisa melakukan pertemuan.
 
+<br/><br/>
+<p align="center" width="100%">
+    <img width="50%" src="https://github.com/user-attachments/assets/3685e5c7-c5a1-4bfd-ba07-0c16969caec2">
+</p>
+Ketika memilih opsi 5, akan ditunjukkan pertemuan mendatang. Karena kita sudah memproses pertemuan mendatang milik dr. Quanrui, maka sudah tidak ada pertemuan mendatang yang diminta oleh pasien.
 
+<br/><br/>
+<p align="center" width="100%">
+    <img width="50%" src="https://github.com/user-attachments/assets/d456e7d7-7ec3-4375-ba33-d980563dbbe8">
+</p>
+Ketika memilih opsi 6, kita akan diperlihatkan semua daftar pasien secara BST <i>Inorder</i> beserta ID, Alamat, Nomor Telepon, dan Riwayat Medisnya.
 
+<br/><br/>
+<p align="center" width="100%">
+    <img width="50%" src="https://github.com/user-attachments/assets/07296705-366c-4c9a-baa2-f5011a4b5006">
+</p>
+Ketika memilih opsi 7, kita bisa menambahkan riwayat medis ke pasien dengan mencantumkan ID Pasien dulu baru menuliskan apa riwayat medisnya.
 
-
-
-
-
+### 🚪 Laman Akhir
+<p align="center" width="100%">
+    <img width="50%" src="https://github.com/user-attachments/assets/b53684b3-a512-473e-8212-598b975e1f4e">
+</p>
+Di laman keluar, akan ada ucapan terima kasih telah menggunakan programnya, lalu akan dikeluarkan dari program, dengan maksud pengguna tidak bisa memasukkan apa-apa lagi sebagai input.
 
 ---
 ## ⚙️ Teknologi dan Konsep yang Digunakan
@@ -193,10 +237,10 @@ Ketika kita memilih opsi 2, maka kita diminta memasukkan ID Dokter mana yang mau
 ## 👨‍💻 Kontribusi
 
 - Arva Z
-- Baihaqi Hakim Abdullah
+- Baihaqi Hakim Abdullah (L01240
 - Fandhi 
-- Wata
-- Daffa dewanda
+- Ariwata Alfajri (L0124088)
+- Daffa Dewanda Putra (L0124094)
 
 ---
 
