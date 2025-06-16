@@ -9,15 +9,14 @@
 ## 📁 Struktur Folder
 
 ```
-Tubes1_revisi2/
-├── src/ # Kode sumber Java
-│ ├── com/daisukeclinic/ # Kelas utama
-│ ├── com/daisukeclinic/model/ # Model data: pasien, dokter, dll
-│ └── com/daisukeclinic/structure/ # Struktur data tambahan (Queue)
-├── bin/ # File hasil kompilasi
-├── patients.txt # Data pasien
-├── doctors.txt # Data dokter
-└── .vscode/ # Pengaturan VSCode
+├── src/
+│ ├── com/daisukeclinic/
+│ ├── com/daisukeclinic/model/
+│ └── com/daisukeclinic/structure/
+├── bin/
+├── patients.txt
+├── doctors.txt
+└── .vscode/
 ```
 
 
@@ -49,6 +48,26 @@ Tubes1_revisi2/
 11. Search Patient by ID (BST)  
 12. Display All Patients (BST Inorder)  
 0. Exit
+
+---
+
+## ⚙️ Spesifikasi Teknis
+
+- **Bahasa Pemrograman:** Java
+
+- **Struktur Data yang Digunakan:**
+  - Linked List → Untuk manajemen data pasien
+  - Nested Linked List → Untuk mengelola dokter dan pasien yang mereka tangani
+  - Queue → Untuk sistem antrian janji temu pasien
+  - Binary Search Tree (BST) → Untuk pencarian dan pengurutan data pasien berdasarkan ID
+
+- **File Input/Output:**
+  - `patients.txt` → Menyimpan dan membaca data pasien
+  - `doctors.txt` → Menyimpan dan membaca data dokter
+
+- **Antarmuka Program:**
+  - Berbasis teks/console
+  - Menu interaktif berbasis angka
 
 ---
 
@@ -236,11 +255,11 @@ Di laman keluar, akan ada ucapan terima kasih telah menggunakan programnya, lalu
 
 ## 👨‍💻 Kontribusi
 
-- Arva Z
-- Baihaqi Hakim Abdullah (L01240
-- Fandhi 
-- Ariwata Alfajri (L0124088)
-- Daffa Dewanda Putra (L0124094)
+1) Baihaqi Hakim Abdullah (L0124043) - Membuat Program Awal dan Akhir (Antarmuka)
+2) Daffa Dewanda Putra (L0124094) - Membuat File Readme
+3) Fandhi Ahmad Husen (L0124052) - Membuat Program Integratif ke data `.txt`
+4) Ariwata Alfajri (L0124088)
+5) M. Arva Zaky (L0122104)
 
 ---
 
