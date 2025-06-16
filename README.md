@@ -260,3 +260,10 @@ Di laman keluar, akan ada ucapan terima kasih telah menggunakan programnya, lalu
 3) Fandhi Ahmad Husen (L0124052) - Membuat Program Integratif ke data `.txt`
 4) Ariwata Alfajri (L0124088)
 5) M. Arva Zaky (L0122104)
+
+---
+<p align="center" width="100%">
+   Kelompok 9, Kelas C, Semester 2 Tahun Ajaran 2024/2025
+   Program Studi S-1 Informatika, Universitas Sebelas Maret
+</p>
+
