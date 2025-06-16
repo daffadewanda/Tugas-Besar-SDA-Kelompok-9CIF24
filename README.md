@@ -264,6 +264,7 @@ Di laman keluar, akan ada ucapan terima kasih telah menggunakan programnya, lalu
 ---
 <p align="center" width="100%">
    Kelompok 9, Kelas C, Semester 2 Tahun Ajaran 2024/2025
+   
    Program Studi S-1 Informatika, Universitas Sebelas Maret
 </p>
 
