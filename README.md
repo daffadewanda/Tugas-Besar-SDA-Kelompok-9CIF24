@@ -16,7 +16,7 @@
 ├── bin/
 ├── patients.txt
 ├── doctors.txt
-└── .vscode/
+└── README.md
 ```
 
 
