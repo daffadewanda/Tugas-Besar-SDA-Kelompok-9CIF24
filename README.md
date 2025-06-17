@@ -46,8 +46,9 @@
 9. Process Appointment  
 10. Display Upcoming Appointments  
 11. Search Patient by ID (BST)  
-12. Display All Patients (BST Inorder)  
-0. Exit
+12. Display All Patients (BST Inorder)
+13. Add Medical History
+14. Register new doctor
 
 ---
 
