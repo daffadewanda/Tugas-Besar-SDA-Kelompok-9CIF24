@@ -90,7 +90,7 @@ Struktur Data :
 
 ---
 
-## 🔍 Bukti Implementasi (Dengan Penjelasan Deskriptif)
+## 🔍 Implementasi
 
 ### 1. 🔗 Struktur Node Pasien (LinkedList)
 
