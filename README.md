@@ -396,11 +396,11 @@ Di laman keluar, akan ada ucapan terima kasih telah menggunakan programnya, lalu
 
 ## 👨‍💻 Kontribusi
 
-1) Baihaqi Hakim Abdullah (L0124043) - Membuat Program Awal dan Akhir (Antarmuka)
-2) Daffa Dewanda Putra (L0124094) - Membuat File README
-3) Fandhi Ahmad Husen (L0124052) - Membuat Program Integratif ke data `.txt`
+1) Baihaqi Hakim Abdullah (L0124043) - Membuat Program Awal dan Akhir (Antarmuka) 
+2) Daffa Dewanda Putra (@daffadewanda - L0124094) - Membuat File README 
+3) Fandhi Ahmad Husen (@fafaalghozali - L0124052) - Membuat Program Integratif ke data `.txt`
 4) Ariwata Alfajri (L0124088)
-5) M. Arva Zaky (L0122104)
+5) M. Arva Zaky (@ArdovZ - L0122104)
 
 ---
 <p align="center" width="100%">
