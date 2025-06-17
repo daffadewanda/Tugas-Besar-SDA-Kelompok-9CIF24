@@ -51,23 +51,163 @@
 
 ---
 
-## ⚙️ Spesifikasi Detail
+## 🧠 Langkah Alur Algoritma Program
 
-- **Bahasa Pemrograman:** Java
+Dalam sistem simulasi klinik ini, pengguna berinteraksi melalui antarmuka berbasis teks. Proses kerja program dibangun atas serangkaian algoritma berikut:
 
-- **Struktur Data yang Digunakan:**
-  - Linked List → Untuk manajemen data pasien
-  - Nested Linked List → Untuk mengelola dokter dan pasien yang mereka tangani
-  - Queue → Untuk sistem antrian janji temu pasien
-  - Binary Search Tree (BST) → Untuk pencarian dan pengurutan data pasien berdasarkan ID
+1. **Menambahkan Pasien**  
+   Pengguna memasukkan ID dan nama pasien. Program membuat node baru dan menambahkannya ke `LinkedList`. Data juga disimpan secara permanen ke file `patients.txt`.
 
-- **File Input/Output:**
-  - `patients.txt` → Menyimpan dan membaca data pasien
-  - `doctors.txt` → Menyimpan dan membaca data dokter
+2. **Menghapus Pasien berdasarkan ID**  
+   Program menelusuri linked list dan menghapus node yang memiliki ID sesuai input.
 
-- **Antarmuka Program:**
-  - Berbasis teks/console
-  - Menu interaktif berbasis angka
+3. **Mencari Pasien berdasarkan Nama**  
+   Program menelusuri tiap node dalam linked list dan mencocokkan nama pasien.
+
+4. **Login & Logout Dokter**  
+   Dokter memasukkan username dan password. Jika cocok, data dokter disimpan ke variabel `currentDoctor`. Logout menghapus nilai variabel ini.
+
+5. **Menjadwalkan Janji Temu**  
+   Saat dokter login, mereka dapat menambahkan janji temu pasien ke `Queue`.
+
+6. **Memproses Janji Temu**  
+   Antrian diproses berdasarkan urutan masuk menggunakan struktur data `Queue`.
+
+7. **Pencarian Pasien dengan Binary Search Tree**  
+   Program menyalin semua pasien dari linked list ke struktur `BST`. Pencarian berdasarkan ID dilakukan secara efisien. Inorder traversal digunakan untuk menampilkan pasien terurut.
+
+---
+
+## ⚙️ Spesifikasi Teknis
+Bahasa Pemrograman : Java
+Struktur Data :
+- LinkedList (manajemen pasien)
+- Queue (sistem antrian janji temu)
+- Binary Search Tree (pencarian dan pengurutan pasien)
+- File Persistensi : patients.txt, doctors.txt
+- Antarmuka : CLI (Command Line Interface)
+
+
+---
+
+## 🔍 Bukti Implementasi (Dengan Penjelasan Deskriptif)
+
+### 1. 🔗 Struktur Node Pasien (LinkedList)
+
+```
+class PatientNode {
+    String id;
+    String name;
+    PatientNode next;
+
+    public PatientNode(String id, String name) {
+        this.id = id;
+        this.name = name;
+        this.next = null;
+    }
+}
+```
+Pada method constructor, argumen id dan name digunakan untuk mengisi data pasien. Properti next diinisialisasikan null, menandakan bahwa node ini belum terhubung ke node lain. Struktur ini membentuk rantai pasien (linked list) untuk mempermudah traversal dan manajemen data.
+
+---
+
+### 2. 🔍 Pencarian Pasien Berdasarkan Nama
+
+```
+public PatientNode searchByName(String name) {
+    PatientNode current = head;
+    while (current != null) {
+        if (current.name.equalsIgnoreCase(name)) {
+            return current;
+        }
+        current = current.next;
+    }
+    return null;
+}
+```
+Fungsi ini menggunakan pencarian linear dalam <i>linked list</i>. current akan bergerak dari head hingga menemukan node dengan nama yang sesuai (mengabaikan huruf kapital). Jika tidak ditemukan, akan dikembalikan null.
+
+---
+
+### 3. 🧑‍⚕️ Login Dokter & Manajemen Sesi
+
+```
+Doctor currentDoctor = null;
+
+public boolean login(String username, String password) {
+    for (Doctor d : doctors) {
+        if (d.username.equals(username) && d.password.equals(password)) {
+            currentDoctor = d;
+            return true;
+        }
+    }
+    return false;
+}
+```
+Setelah input, sistem mencocokkan username dan password dengan data dokter yang tersedia. Jika cocok, objek Doctor yang login akan disimpan dalam currentDoctor untuk keperluan akses berikutnya (menjadwalkan janji, melihat pasien, dll).
+
+---
+
+### 4. 🗓️ Menjadwalkan Janji Temu (Queue)
+
+```
+Queue<Appointment> appointmentQueue = new LinkedList<>();
+
+public void scheduleAppointment(Appointment a) {
+    appointmentQueue.add(a);
+}
+```
+Struktur data <i>Queue</i> digunakan untuk mengatur janji temu agar sesuai urutan masuk. Objek Appointment dimasukkan ke antrian dengan add() dan diproses secara FIFO (First In First Out).
+
+---
+
+### 5. 🌳 Pencarian Pasien Menggunakan BST
+
+```
+class BSTNode {
+    String patientID;
+    Patient data;
+    BSTNode left, right;
+
+    BSTNode(Patient data) {
+        this.data = data;
+        this.patientID = data.id;
+        left = right = null;
+    }
+}
+```
+Struktur BSTNode menyimpan data pasien berdasarkan ID sebagai kunci utama. Properti left dan right digunakan untuk menghubungkan node-node dalam bentuk pohon biner terurut.
+Saat inorder traversal dipanggil, program menampilkan pasien secara urut berdasarkan ID.
+
+---
+
+### 6. 🔁 Inorder Traversal BST
+
+```
+public void inorderTraversal(BSTNode node) {
+    if (node != null) {
+        inorderTraversal(node.left);
+        System.out.println(node.data.name + " (" + node.data.id + ")");
+        inorderTraversal(node.right);
+    }
+}
+```
+Inorder traversal (Left - Root - Right) menjamin bahwa data ditampilkan dalam urutan ID yang terurut (dari kecil ke besar), sesuai karakteristik BST. Cocok untuk laporan data pasien secara sistematis.
+
+---
+
+### 7. 💾 Menyimpan Data Pasien ke File
+
+```
+BufferedWriter writer = new BufferedWriter(new FileWriter("patients.txt"));
+while (current != null) {
+    writer.write(current.id + "," + current.name);
+    writer.newLine();
+    current = current.next;
+}
+writer.close();
+```
+Setiap data pasien dari LinkedList disimpan ke file patients.txt. Hal ini memungkinkan data tetap tersimpan meskipun program dimatikan, mendukung fitur persistensi data. Begitu juga dengan integrasi yang terdaftar dengan data dokter ke file.
 
 ---
 
